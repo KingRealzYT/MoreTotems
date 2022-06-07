@@ -2,8 +2,8 @@ package com.realz.moretotems;
 
 import com.realz.moretotems.init.ModBlocks;
 import com.realz.moretotems.init.ModItems;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
@@ -29,19 +29,19 @@ public class MoreTotems {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        DeferredWorkQueue.runLater(() -> { });
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) { }
 
-    public static final ItemGroup ESSENCETAB = new ItemGroup("essencetab") {
+    public static final CreativeModeTab ESSENCETAB = new CreativeModeTab("essencetab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.CHICKEN_ESSENCE.get());
         }
     };
 
-    public static final ItemGroup TOTEMTAB = new ItemGroup("totemtab") {
+    public static final CreativeModeTab TOTEMTAB = new CreativeModeTab("totemtab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.CHICKEN_TOTEM.get());

@@ -1,7 +1,7 @@
 package com.realz.moretotems.essence;
 
 import com.realz.moretotems.MoreTotems;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 
 public class EssenceBase extends Item {
 
