@@ -2,8 +2,7 @@ package com.realz.moretotems.init;
 
 import com.realz.moretotems.MoreTotems;
 import com.realz.moretotems.essence.EssenceBase;
-import com.realz.moretotems.totems.TotemBase;
-import com.realz.moretotems.totems.chickenTotem;
+import com.realz.moretotems.totems.ChickenTotem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,6 +16,6 @@ public class ModItems {
     public static final RegistryObject<Item> CHICKEN_ESSENCE = ITEMS.register("chicken_essence", EssenceBase::new);
 
     // Totems
-    public static final RegistryObject<Item> CHICKEN_TOTEM = ITEMS.register("chicken_totem", chickenTotem::new);
+    public static final RegistryObject<Item> CHICKEN_TOTEM = ITEMS.register("chicken_totem", ChickenTotem::new);
 
 }
