@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("rmtotems")
 public class MoreTotems {
     public static Logger LOGGER = LogManager.getLogger();
-    public static String MOD_ID = "rmtotems";
+    public static final String MOD_ID = "rmtotems";
 
     public MoreTotems() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
