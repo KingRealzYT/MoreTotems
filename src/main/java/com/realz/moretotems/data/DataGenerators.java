@@ -1,6 +1,8 @@
 package com.realz.moretotems.data;
 
 import com.realz.moretotems.MoreTotems;
+import com.realz.moretotems.data.client.ModBlockStateProvider;
+import com.realz.moretotems.data.client.ModItemModelProvider;
 import com.realz.moretotems.data.lang.ModEnLangProvider;
 import com.realz.moretotems.data.loot.ModLootTables;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,5 +22,7 @@ public class DataGenerators {
 
         gen.addProvider(new ModLootTables(gen));
         gen.addProvider(new ModEnLangProvider(gen));
+        gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
+        gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
     }
 }
