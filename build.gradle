@@ -17,7 +17,7 @@ apply plugin: 'maven-publish'
 
 version = ' 1.0'
 group = 'com.realz.rmtotems' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'TotemsMod '
+archivesBaseName = 'TotemsMod'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
@@ -34,7 +34,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'parchment', version: '1.18.1-2022.02.13-1.18.2'
+    mappings channel: 'parchment', version: '1.18.2-2022.08.02-1.18.2'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -58,7 +58,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                rmtotems {
                     source sourceSets.main
                 }
             }
@@ -80,7 +80,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                rmtotems {
                     source sourceSets.main
                 }
             }
@@ -102,10 +102,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'rmtotems', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                examplemod {
+                rmtotems {
                     source sourceSets.main
                 }
             }

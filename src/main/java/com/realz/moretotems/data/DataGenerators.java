@@ -1,6 +1,8 @@
 package com.realz.moretotems.data;
 
 import com.realz.moretotems.MoreTotems;
+import com.realz.moretotems.data.lang.ModEnLangProvider;
+import com.realz.moretotems.data.loot.ModLootTables;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -13,6 +15,10 @@ public class DataGenerators {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
+        var gen = event.getGenerator();
+        var existingFileHelper = event.getExistingFileHelper();
 
+        gen.addProvider(new ModLootTables(gen));
+        gen.addProvider(new ModEnLangProvider(gen));
     }
 }
