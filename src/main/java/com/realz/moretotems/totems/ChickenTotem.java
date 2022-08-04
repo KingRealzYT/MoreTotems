@@ -40,21 +40,21 @@ public class ChickenTotem extends SimpleFoiledItem {
 
         if (!p.getCooldowns().isOnCooldown(this)) {
 
-                Chicken chicken;
+            Chicken chicken;
 
-                    for(int j = 0; j < 10; ++j) {
-                    chicken= EntityType.CHICKEN.create(p.level);
-                    chicken.setAge(-24000);
-                    chicken.moveTo(p.getX(), p.getY(), p.getZ(), p.getYRot(), 0.0F);
-                    p.level.addFreshEntity(chicken);
+            for (int j = 0; j < 10; ++j) {
+                chicken = EntityType.CHICKEN.create(p.level);
+                chicken.setAge(-24000);
+                chicken.moveTo(p.getX(), p.getY(), p.getZ(), p.getYRot(), 0.0F);
+                p.level.addFreshEntity(chicken);
 
-                }
+            }
 
 
-                p.getCooldowns().addCooldown(this, 200);
-                InteractionResultHolder.success(p.getItemInHand(p.getUsedItemHand()));
+            p.getCooldowns().addCooldown(this, 200);
+            InteractionResultHolder.success(p.getItemInHand(p.getUsedItemHand()));
         }
         InteractionResultHolder.fail(Minecraft.getInstance().player.getItemInHand(p.getUsedItemHand()));
         return super.use(pLevel, p, pUsedHand);
-
+    }
 }
