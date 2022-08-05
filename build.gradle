@@ -98,18 +98,6 @@ dependencies {
     */
 }
 
-//need to exculde all org.lwjgl which use version 3.2.1 and use 3.3.1 instead
-
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-
-        // https://docs.gradle.org/current/userguide/resolution_rules.html
-        if (details.requested.group == 'org.lwjgl') {
-            details.useVersion '3.3.0'
-        }
-    }
-}
-
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
